@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
-import Stack from '@mui/material/Stack';
+import { Box,Stack,Typography,Button } from '@mui/material'
 import Logo from "../assets/images/sai.png"
 const Navbar = () => {
   return (
@@ -11,7 +11,9 @@ const Navbar = () => {
     px="20px"
     >
       <Link to="/">
-       <img src={Logo} style={{width:'100px',height:'100px', margin:'0px 20px'}}></img>
+         <Typography color="#000080" fontWeight="600" fontSize="26px"  mt={4} >
+            Fit-Streak
+         </Typography>
       </Link>
 
 
