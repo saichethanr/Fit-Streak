@@ -5,7 +5,7 @@ import HorizontalScrollBar from './HorizontalScrollBar'
 
 
 
-const SearchExercises = ({setExercises  ,bodyPart,setBodyPart}) => {
+const SearchExercises = ({setExercises,bodyPart,setBodyPart}) => {
    const[search,setSearch] = useState('')
    
    const[bodyParts,setBodyParts]  = useState([])
@@ -32,7 +32,7 @@ const SearchExercises = ({setExercises  ,bodyPart,setBodyPart}) => {
           || exercise.bodyPart.toLowerCase().includes(search)
         )
         setSearch('')
-        setExercise(SearchExercises)
+        setExercises(SearchExercises)
       }
    }
 
