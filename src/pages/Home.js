@@ -4,11 +4,15 @@ import Exercises from '../components/Exercises'
 import SearchExercises from '../components/SearchExercises'
 import HeroBanner from '../components/HeroBanner'
 const Home = () => {
+  const[exercise,setExercises] = useState('all');
+  const[bodyPart,setBodyPart] = useState([]);
+  // both exercise ans setexercise share the same state
   return (
     <Box>
       <HeroBanner/>
-      <SearchExercises/>
-      <Exercises/>
+       
+      <SearchExercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
+      <Exercises setExercises={setExercises} bodyPart={bodyPart} setBodyPart={setBodyPart}/>
     </Box>
   )
 }

@@ -5,9 +5,9 @@ import HorizontalScrollBar from './HorizontalScrollBar'
 
 
 
-const SearchExercises = () => {
+const SearchExercises = ({setExercises  ,bodyPart,setBodyPart}) => {
    const[search,setSearch] = useState('')
-   const[exercise,setExercise] = useState([])
+   
    const[bodyParts,setBodyParts]  = useState([])
 
   //to display the categories  as soon as the page loads
@@ -98,7 +98,7 @@ const SearchExercises = () => {
          
 
          <Box sx={{position:'relative',width:'100%',p:'20px'}}>
-               <HorizontalScrollBar data = {bodyParts}/>
+               <HorizontalScrollBar data = {bodyParts} bodyPart={bodyPart} setBodyPart = {setBodyPart}/>
 
              
          </Box>
